@@ -1,0 +1,11 @@
+[build]
+  # Site statique : aucun build, les fichiers publiés sont à la racine du dépôt.
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"

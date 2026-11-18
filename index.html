@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark light" />
+  <title>UnknownMDG — Portfolio</title>
+  <meta name="description" content="Portfolio de UnknownMDG, designer UI/UX, créateur visuel et motion designer basé à Madagascar." />
+  <meta name="theme-color" content="#0b100e" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="UnknownMDG" />
+  <meta property="og:title" content="UnknownMDG — Designer UI/UX & visuel" />
+  <meta property="og:description" content="Interfaces, identités et contenus motion conçus avec précision. Portfolio éditorial d’un designer basé à Antananarivo." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="UnknownMDG — Designer UI/UX & visuel" />
+  <meta name="twitter:description" content="Interfaces, identités et contenus motion conçus avec précision." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (!t) t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        document.documentElement.dataset.theme = t;
+      } catch (e) {}
+      document.documentElement.classList.add("js", "filtres-vierges");
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#accueil">Aller au contenu</a>
+  <div class="mouse-lights" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="cursor" aria-hidden="true">
+    <svg class="cursor-pen" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false">
+      <g transform="translate(13 33) rotate(-38) scale(1 -1)">
+        <path class="pen-body" d="M0 0 C-4 -6 -6.5 -12 -6.5 -18 L-7 -25 L7 -25 L6.5 -18 C6.5 -12 4 -6 0 0 Z" />
+        <path class="pen-slit" d="M0 -2 L0 -13" />
+        <circle class="pen-hole" cx="0" cy="-16" r="1.9" />
+        <path class="pen-cross" d="M-3.6 0 H3.6 M0 -3.6 V3.6" />
+      </g>
+    </svg>
+    <span class="cursor-label">Voir</span>
+  </div>
+  <aside class="side-rail" aria-hidden="true">
+    <span class="rail-text">Portfolio — 2026</span>
+    <span class="rail-line"></span>
+    <span class="rail-text rail-text-sm">Antananarivo, MG</span>
+  </aside>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#accueil">unknown<span class="logo-accent">mdg</span></a>
+      <nav class="site-nav" aria-label="Navigation">
+        <a href="#projets"><span class="nav-num">01</span>Projets</a>
+        <a href="#apropos"><span class="nav-num">02</span>À propos</a>
+        <a href="#contact"><span class="nav-num">03</span>Contact</a>
+      </nav>
+      <button class="lamp-toggle" type="button" aria-label="Basculer le thème clair/sombre" aria-pressed="false">
+        <svg class="lamp" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <path class="lamp-cord" d="M32 4v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path class="lamp-shade" d="M20 22h24l5 14H15l5-14z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <circle class="lamp-bulb" cx="32" cy="42" r="5" />
+          <path class="lamp-stand" d="M32 47v7M24 58h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <button class="menu-toggle" type="button" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-top">
+      <span class="mobile-menu-label">Menu</span>
+      <button class="mobile-menu-close" type="button" aria-label="Fermer le menu">Fermer <span aria-hidden="true">✕</span></button>
+    </div>
+    <nav class="mobile-nav" aria-label="Navigation mobile">
+      <a href="#projets"><span class="nav-num">01</span>Projets</a>
+      <a href="#apropos"><span class="nav-num">02</span>À propos</a>
+      <a href="#contact"><span class="nav-num">03</span>Contact</a>
+    </nav>
+    <div class="mobile-menu-foot">
+      <a href="mailto:contact@example.com">contact@example.com</a>
+      <p>Antananarivo, MG · Disponible pour collaborations</p>
+    </div>
+  </div>
+
+  <main id="accueil" tabindex="-1">
+    <!-- Hero -->
+    <section class="hero container">
+      <span class="hero-ghost" aria-hidden="true">folio</span>
+      <div class="hero-top">
+        <p class="eyebrow">Portfolio éditorial — Antananarivo, MG</p>
+        <p class="eyebrow eyebrow-right">Disponible pour collaborations</p>
+      </div>
+      <h1 class="hero-title">
+        <span class="line">Designer</span>
+        <span class="line line-accent">UI/UX &amp; visuel</span>
+      </h1>
+      <div class="hero-bottom">
+        <p class="hero-deck">Interfaces, identités et contenus motion conçus avec précision. Un travail éditorial où la typographie, l’image et le détail se répondent.</p>
+        <div class="hero-actions">
+          <a href="#projets" class="btn btn-primary">Explorer les projets</a>
+          <a href="#contact" class="btn btn-outline">Me contacter</a>
+        </div>
+      </div>
+      <div class="hero-marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <span>UI/UX</span><span>·</span><span>Branding</span><span>·</span><span>Motion</span><span>·</span><span>Direction artistique</span><span>·</span><span>Social media</span><span>·</span>
+          </div>
+          <div class="marquee-group">
+            <span>UI/UX</span><span>·</span><span>Branding</span><span>·</span><span>Motion</span><span>·</span><span>Direction artistique</span><span>·</span><span>Social media</span><span>·</span>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#projets" aria-label="Scroll — aller aux projets">
+        <span class="scroll-cue-line" aria-hidden="true"></span>
+        <span class="scroll-cue-text">Scroll</span>
+      </a>
+    </section>
+
+    <!-- Tip du studio (haut de page) -->
+    <aside class="tip-card container" id="tip-card" aria-live="polite" aria-label="Tip du jour">
+      <p class="tip-kicker"><span class="tip-label">Tip du jour</span></p>
+      <blockquote class="tip-text" id="tip-text">Un seul accent par écran : si tout ressort, rien ne ressort.</blockquote>
+      <div class="tip-foot">
+        <button class="tip-next" type="button" id="tip-next">Un autre tip <span aria-hidden="true">↻</span></button>
+      </div>
+    </aside>
+
+    <!-- Projets -->
+    <section id="projets" class="section container">
+      <div class="section-head">
+        <div class="section-head-left">
+          <span class="section-index">01 — Éditions</span>
+          <h2 class="section-title">Projets sélectionnés</h2>
+        </div>
+        <p class="section-note">Deux familles : cinq pièces graphiques, un film. Chaque projet s’ouvre comme un article — contexte, approche, arborescence et médias.</p>
+      </div>
+
+      <div class="project-filter" role="group" aria-label="Filtrer les projets par famille">
+        <button class="filter-btn" type="button" data-filter="all" aria-pressed="false">Tout <span class="filter-count">06</span></button>
+        <button class="filter-btn" type="button" data-filter="graphique" aria-pressed="false">Graphique <span class="filter-count">05</span></button>
+        <button class="filter-btn" type="button" data-filter="video" aria-pressed="false">Vidéo <span class="filter-count">01</span></button>
+      </div>
+
+      <p class="project-hint" id="project-hint">
+        <span class="project-hint-dot" aria-hidden="true"></span>
+        Choisissez une famille — graphique ou vidéo — pour déplier les projets.
+      </p>
+
+      <p class="sr-only" id="project-status" role="status" aria-live="polite"></p>
+
+      <div class="project-groups">
+        <div class="project-group" data-group="graphique" aria-labelledby="group-graphique">
+          <div class="group-head">
+            <span class="group-index">A</span>
+            <h3 class="group-title" id="group-graphique">Graphique &amp; statique</h3>
+            <span class="group-count">05 projets</span>
+          </div>
+          <ul class="project-list">
+        <!-- 01 -->
+        <li class="project">
+          <div class="project-header" role="button" aria-expanded="false" aria-controls="proj-1" tabindex="0">
+            <div class="project-thumb">
+              <img src="https://picsum.photos/seed/tsunova/400/500" alt="" loading="lazy" />
+            </div>
+            <div class="project-info">
+              <span class="badge">Identité / DA</span>
+              <h3 class="project-title">Tsunova.X</h3>
+              <p class="project-excerpt">Marque créative personnelle — univers fluide et organique, prompts visuels détaillés.</p>
+            </div>
+            <span class="expand-icon" aria-hidden="true">+</span>
+          </div>
+          <div class="project-details" id="proj-1">
+            <div class="details-grid">
+              <div class="detail-item"><span class="detail-label">Brand</span><span class="detail-value">Tsunova.X</span></div>
+              <div class="detail-item"><span class="detail-label">Rôle</span><span class="detail-value">Direction artistique</span></div>
+              <div class="detail-item"><span class="detail-label">Plateforme</span><span class="detail-value">Instagram</span></div>
+            </div>
+            <p class="detail-text">Tsunova.X naît du mélange entre <em>Tsunami</em> et <em>Supernova</em>. L’univers visuel est <strong>fluide et organique</strong>, inspiré du quotidien malgache : couleurs de fruits au marché, teintes des clips musicaux, lumière de la capitale.</p>
+            <p class="detail-text">Approche : interview créative, direction artistique qui défie les idées génériques, puis construction d’un brand book. L’identité se veut « African-rooted, globally relevant » sans stéréotypes.</p>
+            <p class="detail-subtitle">Arborescence de production</p>
+            <ul class="detail-tree">
+              <li>Recherche visuelle<ul><li>Moodboard & palette</li><li>Références musicales & couleurs du quotidien</li></ul></li>
+              <li>Concept<ul><li>Territoire A : Groove Visuel</li><li>Territoire B : Marché Numérique</li><li>Territoire C : Signal</li></ul></li>
+              <li>Production<ul><li>Prompts visuels détaillés</li><li>Charte graphique & brand book</li></ul></li>
+            </ul>
+            <div class="gallery">
+              <button class="gallery-thumb" type="button" data-project="0" data-index="0"><img src="https://picsum.photos/seed/tsunova-a/800/600" alt="Tsunova X A" loading="lazy" /></button>
+              <button class="gallery-thumb" type="button" data-project="0" data-index="1"><img src="https://picsum.photos/seed/tsunova-b/800/600" alt="Tsunova X B" loading="lazy" /></button>
+              <button class="gallery-thumb" type="button" data-project="0" data-index="2"><img src="https://picsum.photos/seed/tsunova-c/800/600" alt="Tsunova X C" loading="lazy" /></button>
+            </div>
+          </div>
+        </li>
+        <!-- 02 -->
+        <li class="project">
+          <div class="project-header" role="button" aria-expanded="false" aria-controls="proj-2" tabindex="0">
+            <div class="project-thumb">
+              <img src="https://picsum.photos/seed/wnl/400/500" alt="" loading="lazy" />
+            </div>
+            <div class="project-info">
+              <span class="badge">Branding / Événement</span>
+              <h3 class="project-title">Why Not Linux</h3>
+              <p class="project-excerpt">Identité visuelle et supports pour un événement tech à Antananarivo.</p>
+            </div>
+            <span class="expand-icon" aria-hidden="true">+</span>
+          </div>
+          <div class="project-details" id="proj-2">
+            <div class="details-grid">
+              <div class="detail-item"><span class="detail-label">Brand</span><span class="detail-value">Why Not Linux 3.0</span></div>
+              <div class="detail-item"><span class="detail-label">Rôle</span><span class="detail-value">Graphiste & organisateur</span></div>
+              <div class="detail-item"><span class="detail-label">Lieu</span><span class="detail-value">Antananarivo, MG</span></div>
+            </div>
+            <p class="detail-text">Refonte complète d’un événement Linux/open source existant pour une édition 3.0 plus mature. Création du logo, de l’affiche et de la communication digitale avec une direction sobre et impactante.</p>
+            <p class="detail-text">Approche : trois pistes de branding, préférence pour le pixel penguin bleu/orange avec le prompt « &gt;_ ». Teaser visuel mystérieux, silhouette discrète, pas d’obscurité excessive.</p>
+            <p class="detail-subtitle">Arborescence de production</p>
+            <ul class="detail-tree">
+              <li>Marque<ul><li>Logo (pixel penguin &gt;_)</li><li>Charte & alignement texte</li></ul></li>
+              <li>Événement<ul><li>Affiche physique & digitale</li><li>Teaser visuel</li></ul></li>
+              <li>Communication<ul><li>Déclinaisons réseaux sociaux</li><li>Archives & page d’événement</li></ul></li>
+            </ul>
+            <div class="gallery">
+              <button class="gallery-thumb" type="button" data-project="1" data-index="0"><img src="https://picsum.photos/seed/wnl-a/800/600" alt="Why Not Linux A" loading="lazy" /></button>
+              <button class="gallery-thumb" type="button" data-project="1" data-index="1"><img src="https://picsum.photos/seed/wnl-b/800/600" alt="Why Not Linux B" loading="lazy" /></button>
+              <button class="gallery-thumb" type="button" data-project="1" data-index="2"><img src="https://picsum.photos/seed/wnl-c/800/600" alt="Why Not Linux C" loading="lazy" /></button>
+            </div>
+          </div>
+        </li>
+        <!-- 03 -->
+        <li class="project">
+          <div class="project-header" role="button" aria-expanded="false" aria-controls="proj-3" tabindex="0">
+            <div class="project-thumb">
+              <img src="https://picsum.photos/seed/nova/400/500" alt="" loading="lazy" />
+            </div>
+            <div class="project-info">
+              <span class="badge">Branding</span>
+              <h3 class="project-title">NOVA</h3>
+              <p class="project-excerpt">Identité et brand book pour une agence de communication HTR.</p>
+            </div>
+            <span class="expand-icon" aria-hidden="true">+</span>
+          </div>
+          <div class="project-details" id="proj-3">
+            <div class="details-grid">
+              <div class="detail-item"><span class="detail-label">Brand</span><span class="detail-value">NOVA</span></div>
+              <div class="detail-item"><span class="detail-label">Rôle</span><span class="detail-value">Identité visuelle & brand book</span></div>
+              <div class="detail-item"><span class="detail-label">Secteur</span><span class="detail-value">HTR</span></div>
+            </div>
+            <p class="detail-text">Construction de la communication visuelle de NOVA, agence de branding et de visuels pour l’hôtellerie, le tourisme et la restauration. Le logo bleu existant est conservé ; direction créative, moderne et audacieuse avec un symbole géométrique hybride.</p>
+            <p class="detail-text">Approche : brand book complet à partir d’un PDF de discussion existant. Déclinaison sur supports print et digitaux, recherche d’un symbole distinctif hybride, cohérence entre le bleu hérité et la nouvelle direction.</p>
+            <p class="detail-subtitle">Arborescence de production</p>
+            <ul class="detail-tree">
+              <li>Analyse<ul><li>PDF de discussion existant</li><li>Positionnement HTR</li></ul></li>
+              <li>Identité<ul><li>Logo bleu conservé</li><li>Symbole géométrique hybride</li><li>Typographie & palette</li></ul></li>
+              <li>Brand Book<ul><li>Règles d’usage</li><li>Supports de communication</li></ul></li>
+            </ul>
+            <div class="gallery">
+              <button class="gallery-thumb" type="button" data-project="2" data-index="0"><img src="https://picsum.photos/seed/nova-a/800/600" alt="NOVA A" loading="lazy" /></button>
+              <button class="gallery-thumb" type="button" data-project="2" data-index="1"><img src="https://picsum.photos/seed/nova-b/800/600" alt="NOVA B" loading="lazy" /></button>
+              <button class="gallery-thumb" type="button" data-project="2" data-index="2"><img src="https://picsum.photos/seed/nova-c/800/600" alt="NOVA C" loading="lazy" /></button>
+            </div>
+          </div>
+        </li>
+        <!-- 05 -->
+        <li class="project">
+          <div class="project-header" role="button" aria-expanded="false" aria-controls="proj-5" tabindex="0">
+            <div class="project-thumb">
+              <img src="https://picsum.photos/seed/stress/400/500" alt="" loading="lazy" />
+            </div>
+            <div class="project-info">
+              <span class="badge">UI/UX</span>
+              <h3 class="project-title">Application de gestion du stress</h3>
+              <p class="project-excerpt">Conception centrée utilisateur — réflexion produit, interface et prototypage.</p>
+            </div>
+            <span class="expand-icon" aria-hidden="true">+</span>
+          </div>
+          <div class="project-details" id="proj-5">
+            <div class="details-grid">
+              <div class="detail-item"><span class="detail-label">Brand</span><span class="detail-value">Application bien-être (concept)</span></div>
+              <div class="detail-item"><span class="detail-label">Rôle</span><span class="detail-value">UI/UX Design & prototypage</span></div>
+              <div class="detail-item"><span class="detail-label">Focus</span><span class="detail-value">Gestion du stress</span></div>
+            </div>
+            <p class="detail-text">Projet de conception d’application mobile dédiée à la gestion du stress. Réflexion produit centrée sur l’utilisateur, du problème à la solution, avec design d’interface et prototypage navigable.</p>
+            <p class="detail-text">Approche : design centré utilisateur (UCD) — recherche des besoins, wireframes, maquettes haute fidélité, puis prototypage interactif pour valider les flux avant développement.</p>
+            <p class="detail-subtitle">Arborescence de production</p>
+            <ul class="detail-tree">
+              <li>Découverte<ul><li>Personas & parcours utilisateur</li><li>Audit des besoins en gestion du stress</li></ul></li>
+              <li>Conception<ul><li>Wireframes & arborescence fonctionnelle</li><li>Maquettes UI</li></ul></li>
+              <li>Validation<ul><li>Prototype interactif</li><li>Tests & itérations</li></ul></li>
+            </ul>
+            <div class="gallery">
+              <button class="gallery-thumb" type="button" data-project="4" data-index="0"><img src="https://picsum.photos/seed/stress-a/800/600" alt="Stress A" loading="lazy" /></button>
+              <button class="gallery-thumb" type="button" data-project="4" data-index="1"><img src="https://picsum.photos/seed/stress-b/800/600" alt="Stress B" loading="lazy" /></button>
+              <button class="gallery-thumb" type="button" data-project="4" data-index="2"><img src="https://picsum.photos/seed/stress-c/800/600" alt="Stress C" loading="lazy" /></button>
+            </div>
+          </div>
+        </li>
+        <!-- 06 -->
+        <li class="project">
+          <div class="project-header" role="button" aria-expanded="false" aria-controls="proj-6" tabindex="0">
+            <div class="project-thumb">
+              <img src="https://picsum.photos/seed/pub/400/500" alt="" loading="lazy" />
+            </div>
+            <div class="project-info">
+              <span class="badge">Visuel / Publicité</span>
+              <h3 class="project-title">Visuels publicitaires</h3>
+              <p class="project-excerpt">Scènes et visuels publicitaires ancrés dans des environnements malgaches reconnaissables.</p>
+            </div>
+            <span class="expand-icon" aria-hidden="true">+</span>
+          </div>
+          <div class="project-details" id="proj-6">
+            <div class="details-grid">
+              <div class="detail-item"><span class="detail-label">Brand</span><span class="detail-value">Campagnes locales / AccèsBanque</span></div>
+              <div class="detail-item"><span class="detail-label">Rôle</span><span class="detail-value">Direction artistique & création visuelle</span></div>
+              <div class="detail-item"><span class="detail-label">Style</span><span class="detail-value">Réalisme & identité locale</span></div>
+            </div>
+            <p class="detail-text">Création de visuels et de scènes publicitaires réalistes inspirés d’environnements malgaches reconnaissables : commerce de quartier, livreurs à moto, camions de livraison, minibus, tuk-tuk, avec possibilité d’intégrer des landmarks comme le Rova.</p>
+            <p class="detail-text">Approche : esthétique publicitaire réaliste, ancrage local sans stéréotypes, composition pensée pour l’affichage et les réseaux sociaux, travail sur la lumière et la cohérence de marque.</p>
+            <p class="detail-subtitle">Arborescence de production</p>
+            <ul class="detail-tree">
+              <li>Concept<ul><li>Scènes du quotidien malgache</li><li>Landmarks (Rova, ange noire, etc.)</li></ul></li>
+              <li>Production<ul><li>Prompts visuels détaillés / rendus</li><li>Mockups & mise en scène</li></ul></li>
+              <li>Déclinaison<ul><li>Affichage & print</li><li>Réseaux sociaux</li></ul></li>
+            </ul>
+            <div class="gallery">
+              <button class="gallery-thumb" type="button" data-project="5" data-index="0"><img src="https://picsum.photos/seed/pub-a/800/600" alt="Pub A" loading="lazy" /></button>
+              <button class="gallery-thumb" type="button" data-project="5" data-index="1"><img src="https://picsum.photos/seed/pub-b/800/600" alt="Pub B" loading="lazy" /></button>
+              <button class="gallery-thumb" type="button" data-project="5" data-index="2"><img src="https://picsum.photos/seed/pub-c/800/600" alt="Pub C" loading="lazy" /></button>
+            </div>
+          </div>
+        </li>
+          </ul>
+        </div>
+
+        <div class="project-group" data-group="video" aria-labelledby="group-video">
+          <div class="group-head">
+            <span class="group-index">B</span>
+            <h3 class="group-title" id="group-video">Vidéo &amp; motion</h3>
+            <span class="group-count">01 film</span>
+          </div>
+          <ul class="project-list">
+            <li class="project project-video">
+              <div class="project-header" role="button" aria-expanded="false" aria-controls="proj-4" tabindex="0">
+                <div class="project-thumb">
+                  <img src="https://picsum.photos/seed/mangaroa/400/500" alt="" loading="lazy" />
+                  <span class="thumb-play" aria-hidden="true">▶</span>
+                </div>
+                <div class="project-info">
+                  <span class="badge">Documentaire / Montage</span>
+                  <h3 class="project-title">Documentaire Mangaroa</h3>
+                  <p class="project-excerpt">Film de 4 minutes — extraits vidéo lisibles directement dans la page.</p>
+                </div>
+                <span class="expand-icon" aria-hidden="true">+</span>
+              </div>
+              <div class="project-details" id="proj-4">
+                <div class="details-grid">
+                  <div class="detail-item"><span class="detail-label">Brand</span><span class="detail-value">Mangaroa</span></div>
+                  <div class="detail-item"><span class="detail-label">Rôle</span><span class="detail-value">Montage &amp; narration</span></div>
+                  <div class="detail-item"><span class="detail-label">Outil</span><span class="detail-value">DaVinci Resolve</span></div>
+                </div>
+                <p class="detail-text">Documentaire de 3 à 5 minutes (idéalement 4) sur la vie locale et un appel à projet de développement rural. Double objectif : présenter la réalité du terrain et encourager la participation.</p>
+                <p class="detail-text">Approche : préservation des fichiers sources (aucun déplacement, suppression ou ré-encodage massif). Analyse des 30 premiers rushs avant sélection élargie.</p>
+                <p class="detail-subtitle">Arborescence de production</p>
+                <ul class="detail-tree">
+                  <li>Rushs<ul><li>Analyse des 30 premiers fichiers</li><li>Sélection selon critères de pondération</li></ul></li>
+                  <li>Montage<ul><li>Scénario adapté à l’appel à projet</li><li>Structure narrative 3-5 minutes</li></ul></li>
+                  <li>Livraison<ul><li>Export final sans altération des sources</li></ul></li>
+                </ul>
+                <p class="detail-subtitle">Extraits vidéo — lecture intégrée</p>
+                <div class="video-gallery">
+                  <figure class="video-clip video-clip-feature">
+                    <video controls playsinline preload="metadata" poster="https://picsum.photos/seed/mangaroa-film/1280/720">
+                      <source src="https://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4" />
+                      Votre navigateur ne prend pas en charge la vidéo HTML5.
+                    </video>
+                    <figcaption>
+                      <span>Film principal — montage final</span>
+                      <span class="video-meta">04:12 · 1080p</span>
+                    </figcaption>
+                  </figure>
+                  <figure class="video-clip">
+                    <video controls playsinline preload="metadata" poster="https://picsum.photos/seed/mangaroa-b/800/450">
+                      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+                      Votre navigateur ne prend pas en charge la vidéo HTML5.
+                    </video>
+                    <figcaption><span>Extrait 01 — vie locale</span></figcaption>
+                  </figure>
+                  <figure class="video-clip">
+                    <video controls playsinline preload="metadata" poster="https://picsum.photos/seed/mangaroa-c/800/450">
+                      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                      Votre navigateur ne prend pas en charge la vidéo HTML5.
+                    </video>
+                    <figcaption><span>Extrait 02 — appel à projet</span></figcaption>
+                  </figure>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- À propos — nouvelle mise en page éditoriale -->
+    <section id="apropos" class="section container about">
+      <div class="section-head">
+        <div class="section-head-left">
+          <span class="section-index">02 — À propos</span>
+          <h2 class="section-title">Le profil</h2>
+        </div>
+      </div>
+
+      <div class="about-layout">
+        <figure class="about-figure">
+          <div class="about-portrait">
+            <img src="https://picsum.photos/seed/unknownmdg-portrait/700/900" alt="Portrait de UnknownMDG" loading="lazy" />
+          </div>
+          <div class="stamp" aria-hidden="true">
+            <svg viewBox="0 0 100 100" focusable="false">
+              <defs>
+                <path id="stampPath" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" />
+              </defs>
+              <text><textPath href="#stampPath" startOffset="0">DISPONIBLE · 2026 · ANTANANARIVO · </textPath></text>
+            </svg>
+            <span class="stamp-dot"></span>
+          </div>
+          <figcaption>UnknownMDG — Antananarivo, Madagascar</figcaption>
+        </figure>
+
+        <div class="about-content">
+          <p class="about-lead">Designer UI/UX, graphiste et monteur vidéo. Je conçois des expériences visuelles qui allient rigueur technique et sensibilité éditoriale.</p>
+          <p class="about-body">Chaque projet est traité comme une publication : structure, rythme, typographie et image dialoguent pour créer un impact durable. Je travaille sur les interfaces, les identités de marque, le motion design et la direction artistique.</p>
+          <blockquote class="about-quote">
+            « Toujours dépasser la production d’hier. »
+          </blockquote>
+
+          <div class="about-facts">
+            <div class="fact">
+              <span class="fact-k">Basé à</span>
+              <span class="fact-v">Antananarivo, MG</span>
+            </div>
+            <div class="fact">
+              <span class="fact-k">Disciplines</span>
+              <span class="fact-v">UI/UX · Branding · Motion</span>
+            </div>
+            <div class="fact">
+              <span class="fact-k">Outils</span>
+              <span class="fact-v">Figma · Affinity · DaVinci</span>
+            </div>
+            <div class="fact">
+              <span class="fact-k">Statut</span>
+              <span class="fact-v">Ouvert aux collaborations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-skills">
+        <span class="skills-title">Compétences</span>
+        <ul class="skills-list">
+          <li>UI/UX Design</li>
+          <li>Prototypage</li>
+          <li>Figma</li>
+          <li>Branding</li>
+          <li>Motion design</li>
+          <li>DaVinci Resolve</li>
+          <li>Affinity / Illustrator</li>
+          <li>Direction artistique</li>
+          <li>Social media</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section container contact">
+      <div class="section-head">
+        <div class="section-head-left">
+          <span class="section-index">03 — Contact</span>
+          <h2 class="section-title">Travaillons ensemble</h2>
+        </div>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-main">
+          <p class="contact-lead">Un projet, une collaboration ou simplement une idée à discuter ? Écrivez-moi.</p>
+          <div class="contact-mail-row">
+            <a class="contact-mail" href="mailto:contact@example.com">contact@example.com</a>
+            <button class="mail-copy" type="button" aria-label="Copier l’adresse email" title="Copier l’adresse email">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <rect x="9" y="9" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M15 5.5A1.5 1.5 0 0 0 13.5 4H6a2 2 0 0 0-2 2v7.5A1.5 1.5 0 0 0 5.5 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+              <span class="mail-copy-label">Copier</span>
+            </button>
+          </div>
+          <ul class="contact-list">
+            <li><span class="label">LinkedIn</span><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">linkedin.com/in/votre-profil</a></li>
+            <li><span class="label">GitHub</span><a href="https://github.com/unknownmdg" target="_blank" rel="noopener noreferrer">github.com/unknownmdg</a></li>
+          </ul>
+          <p class="hint">Modifiez vos liens dans <code>index.html</code>.</p>
+        </div>
+        <aside class="contact-card">
+          <span class="contact-card-title">Disponibilité</span>
+          <p class="contact-card-text">Ouvert aux missions freelance et collaborations créatives.</p>
+          <div class="contact-card-row">
+            <span class="dot"></span>
+            <span>Réponse sous 24–48 h</span>
+          </div>
+          <div class="chat-hint" aria-hidden="true">
+            <span>Poser une question</span>
+            <span class="chat-hint-arrow">→</span>
+          </div>
+          <button class="chat-launch" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="chatbot">
+            <span class="sr-only">Ouvrir l’assistant : délais, tarifs et disponibilité</span>
+          </button>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div class="footer-grid">
+      <p class="footer-brand">unknown<span class="logo-accent">mdg</span></p>
+      <p>© <span id="year"></span> — Tous droits réservés</p>
+      <p class="footer-hint"><span class="footer-live" aria-hidden="true"></span><time id="studio-clock" datetime="">--:--</time> à Antananarivo · Design éditorial · Galerie</p>
+      <div class="footer-actions">
+        <button class="footer-action" type="button" id="share-site" aria-label="Partager le portfolio" title="Partager le portfolio">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path d="M12 15V4M8 8l4-4 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5 13v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <span class="action-label">Partager</span>
+        </button>
+        <button class="footer-action" type="button" id="print-page" aria-label="Imprimer ou enregistrer en PDF" title="Imprimer / PDF">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path d="M7 9V4h10v5M7 18H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7 14h10v6H7z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          </svg>
+          <span class="action-label">Imprimer / PDF</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Assistant du studio -->
+  <section class="chatbot" id="chatbot" role="dialog" aria-labelledby="chatbot-title" aria-hidden="true">
+    <header class="chatbot-head">
+      <div class="chatbot-id">
+        <span class="chatbot-avatar" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false">
+            <path d="M12 2.5 17.6 9 15 21H9L6.4 9 12 2.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            <circle cx="12" cy="10" r="1.5" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M12 11.8V16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <div>
+          <h2 class="chatbot-title" id="chatbot-title">Studio Assistant</h2>
+          <p class="chatbot-status"><span class="chatbot-live"></span>En ligne · réponse immédiate</p>
+        </div>
+      </div>
+      <button class="chatbot-close" type="button" aria-label="Fermer l’assistant">✕</button>
+    </header>
+
+    <div class="chatbot-body">
+      <div class="chatbot-log" role="log" aria-live="polite" aria-relevant="additions"></div>
+      <div class="chatbot-chips" role="group" aria-label="Questions rapides">
+        <button class="chat-chip" type="button" data-q="delais">Délais</button>
+        <button class="chat-chip" type="button" data-q="tarifs">Tarifs</button>
+        <button class="chat-chip" type="button" data-q="processus">Processus</button>
+        <button class="chat-chip" type="button" data-q="revisions">Révisions</button>
+        <button class="chat-chip" type="button" data-q="contact">Contact</button>
+      </div>
+    </div>
+
+    <form class="chatbot-form" novalidate>
+      <label class="sr-only" for="chat-input">Votre question</label>
+      <input class="chatbot-input" id="chat-input" type="text" placeholder="Délai pour un logo ? Un budget ?" autocomplete="off" />
+      <button class="chatbot-send" type="submit" aria-label="Envoyer la question">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <path d="M3.5 11.6 20.5 4l-6 16-2.8-6.6-8.2-1.8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </form>
+    <p class="chatbot-note">Réponses automatiques · Devis précis sur demande</p>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Galerie d'images">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" type="button" aria-label="Fermer">✕</button>
+      <button class="lightbox-prev" type="button" aria-label="Précédent">‹</button>
+      <div class="lightbox-image-wrap">
+        <img class="lightbox-image" src="" alt="" />
+      </div>
+      <button class="lightbox-next" type="button" aria-label="Suivant">›</button>
+      <div class="lightbox-caption"></div>
+      <div class="lightbox-dots"></div>
+    </div>
+  </div>
+
+  <button class="to-top" type="button" aria-label="Revenir en haut de la page">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <path d="M12 19V5M6 11l6-6 6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
