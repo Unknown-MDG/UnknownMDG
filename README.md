@@ -1,8 +1,11 @@
 # Portfolio — UnknownMDG
 
-Portfolio statique (HTML/CSS/JS), propre, esthétique et premium, prêt pour Vercel.
+Portfolio statique (HTML/CSS/JS), propre, esthétique et premium.
 
 **En ligne :** [https://unknownmdg.netlify.app/](https://unknownmdg.netlify.app/)
+**Code :** [github.com/Unknown-MDG/UnknownMDG](https://github.com/Unknown-MDG/UnknownMDG)
+
+> Déploiement automatique : chaque `git push` sur `main` est publié par Netlify (site statique, aucun build).
 
 ## Design
 
@@ -91,16 +94,35 @@ outils, la disponibilité, le paiement, les projets et le contact.
 
 Prévisualisation : ouvrez `index.html` dans un navigateur.
 
-## Déploiement sur Vercel
+## Déploiement
+
+Le projet est hébergé sur **Netlify** et relié au dépôt GitHub `Unknown-MDG/UnknownMDG`.
+
+- Branche de production : `main`
+- Build command : *aucun* (site statique)
+- Publish directory : `.` (racine du dépôt, défini dans `netlify.toml`)
+- URL : [https://unknownmdg.netlify.app/](https://unknownmdg.netlify.app/)
+
+**Mettre à jour le site :** modifiez les fichiers, puis poussez sur `main`.
+
+```bash
+git add .
+git commit -m "Mise à jour du portfolio"
+git push
+```
+
+Netlify détecte le commit et republie automatiquement (environ 10 secondes). Le suivi est visible dans *Deploys* du projet Netlify.
+
+### Alternative : Vercel
 
 - Lien direct : [https://vercel.com/new](https://vercel.com/new)
 
-### Via GitHub (recommandé)
+#### Via GitHub
 1. Poussez les fichiers sur un dépôt GitHub.
 2. Sur [vercel.com/new](https://vercel.com/new), importez le dépôt.
 3. Framework Preset : **Other** (site statique) → **Deploy**.
-4. Lien public : `https://<nom-du-projet>.vercel.app` (visible dans le dashboard Vercel).
+4. Lien public : `https://<nom-du-projet>.vercel.app`.
 
-### Via CLI
+#### Via CLI
 1. `npm i -g vercel`
 2. `vercel` puis `vercel --prod`
