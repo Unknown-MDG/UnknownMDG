@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>unknownmdg — Site en construction</title>
+  <meta name="description" content="Le portfolio unknownmdg est en préparation. Une nouvelle version arrive bientôt : projets, documentaire et éditions." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0b100e" />
+  <meta property="og:title" content="unknownmdg — Site en construction" />
+  <meta property="og:description" content="Une nouvelle version du portfolio arrive bientôt." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b100e'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%238fbfa5'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0b100e;
+      --surface: #121915;
+      --fg: #e8efe9;
+      --muted: #8ea094;
+      --line: #25302a;
+      --accent: #8fbfa5;
+      --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+      --sans: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, "Courier New", monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Halos jade discrets, comme sur le portfolio */
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(90px);
+      opacity: 0.45;
+      z-index: 0;
+    }
+    body::before {
+      width: 42vmax;
+      height: 42vmax;
+      top: -16vmax;
+      left: -10vmax;
+      background: radial-gradient(circle, rgba(143, 191, 165, 0.22), transparent 68%);
+    }
+    body::after {
+      width: 36vmax;
+      height: 36vmax;
+      bottom: -14vmax;
+      right: -8vmax;
+      background: radial-gradient(circle, rgba(112, 148, 196, 0.16), transparent 68%);
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      width: min(1120px, 100% - 2.5rem);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 1.75rem 0 1.5rem;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      text-decoration: none;
+      color: var(--fg);
+    }
+
+    .lamp {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(143, 191, 165, 0.12), 0 0 22px rgba(143, 191, 165, 0.55);
+      animation: breathe 4.2s ease-in-out infinite;
+    }
+
+    .brand-name {
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      font-weight: 500;
+    }
+
+    .brand-meta {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem 0 3.5rem;
+      max-width: 46rem;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      align-self: flex-start;
+      padding: 0.42rem 0.85rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(18, 25, 21, 0.7);
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.9rem;
+    }
+
+    .status .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: blink 2.4s ease-in-out infinite;
+    }
+
+    h1 {
+      margin: 0 0 1.35rem;
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(2.6rem, 8vw, 5.4rem);
+      line-height: 0.98;
+      letter-spacing: -0.02em;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .lead {
+      margin: 0 0 2rem;
+      max-width: 34rem;
+      font-size: clamp(1rem, 1.6vw, 1.12rem);
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    .lead strong {
+      color: var(--fg);
+      font-weight: 500;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.8rem 1.4rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.8rem 1.25rem;
+      border: 1px solid var(--accent);
+      border-radius: 999px;
+      color: var(--bg);
+      background: var(--accent);
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 500;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(143, 191, 165, 0.22);
+      outline: none;
+    }
+
+    .btn svg { width: 16px; height: 16px; }
+
+    .hint {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.65rem 1.5rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid var(--line);
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    footer a:hover,
+    footer a:focus-visible {
+      color: var(--fg);
+      border-color: var(--line);
+      outline: none;
+    }
+
+    @keyframes breathe {
+      0%, 100% { box-shadow: 0 0 0 4px rgba(143, 191, 165, 0.12), 0 0 18px rgba(143, 191, 165, 0.45); }
+      50% { box-shadow: 0 0 0 7px rgba(143, 191, 165, 0.07), 0 0 30px rgba(143, 191, 165, 0.7); }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+
+    @media (max-width: 600px) {
+      .wrap { padding: 1.2rem 0 1.2rem; }
+      header { flex-wrap: wrap; }
+      .brand-meta { display: none; }
+      main { padding: 3rem 0 2.5rem; }
+      footer { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .lamp, .status .dot { animation: none; }
+      .btn { transition: none; }
+      .btn:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="https://unknownmdg.netlify.app/" aria-label="unknownmdg — accueil">
+        <span class="lamp" aria-hidden="true"></span>
+        <span class="brand-name">unknownmdg</span>
+      </a>
+      <span class="brand-meta">Portfolio — 2026</span>
+    </header>
+
+    <main>
+      <span class="status"><span class="dot" aria-hidden="true"></span>Site en construction</span>
+
+      <h1>Le portfolio<br />revient <em>bientôt</em>.</h1>
+
+      <p class="lead">
+        Une nouvelle version du site est en préparation : <strong>projets</strong>,
+        <strong>documentaire Mangaroa</strong> et <strong>éditions</strong>.
+        Merci de votre patience — le travail continue en coulisses.
+      </p>
+
+      <div class="actions">
+        <a class="btn" href="https://github.com/Unknown-MDG" target="_blank" rel="noopener noreferrer">
+          Me suivre sur GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 17 17 7" />
+            <path d="M8 7h9v9" />
+          </svg>
+        </a>
+        <span class="hint">Mise en ligne prochaine</span>
+      </div>
+    </main>
+
+    <footer>
+      <span>Antananarivo, Madagascar</span>
+      <span>© 2026 unknownmdg</span>
+    </footer>
+  </div>
+</body>
+</html>
