@@ -277,9 +277,9 @@
       { src: "https://picsum.photos/seed/nova-c/1200/900", alt: "NOVA — supports" }
     ],
     [
-      { src: "https://picsum.photos/seed/mangaroa-a/1200/900", alt: "Mangaroa — rushs" },
-      { src: "https://picsum.photos/seed/mangaroa-b/1200/900", alt: "Mangaroa — montage" },
-      { src: "https://picsum.photos/seed/mangaroa-c/1200/900", alt: "Mangaroa — export" }
+      { src: "mangaroa-still-1.jpg", alt: "Mangaroa — image du trailer" },
+      { src: "mangaroa-still-2.jpg", alt: "Mangaroa — image du trailer" },
+      { src: "mangaroa-still-3.jpg", alt: "Mangaroa — image du trailer" }
     ],
     [
       { src: "https://picsum.photos/seed/stress-a/1200/900", alt: "Stress app — wireframes" },

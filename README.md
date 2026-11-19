@@ -83,12 +83,15 @@ outils, la disponibilité, le paiement, les projets et le contact.
 - `index.html` — contenu, héro, projets, à propos, contact, assistant, lightbox
 - `styles.css` — thèmes clair/sombre, mise en page, typographie, animations, assistant, lightbox
 - `script.js` — thème, lampe, menu mobile, navigation active, suivi souris (rAF), curseur plume, accordéon projets, filtres, liens profonds, partage, carrousel galerie, tip du jour, horloge, assistant
+- `mangaroa-trailer-v2.mp4` — trailer du documentaire (H.264, 720p, 44 s, ~14 Mo)
+- `mangaroa-trailer-poster.jpg` — affiche du lecteur et vignette du projet
+- `mangaroa-still-1/2/3.jpg` — captures du trailer pour la galerie
 
 ## Personnalisation
 
 1. **Contenu** : modifiez `index.html` (textes, projets, compétences, liens de contact/email/LinkedIn/GitHub).
 2. **Images** : remplacez les URLs `picsum.photos` par vos vraies captures dans `index.html` et dans `galleryData` dans `script.js`.
-3. **Vidéos** : dans `index.html`, projet « Documentaire Mangaroa », remplacez les `src` des `<source>` (fichiers `.mp4` hébergés, ou un dossier `videos/` à la racine) et les `poster` par vos propres images d'aperçu. Les extraits actuels sont des **clips de démonstration** librement accessibles (Sintel, MDN, W3Schools) : mettez-y votre film final. Gardez `preload="metadata"` pour ne pas charger les fichiers avant lecture.
+3. **Vidéos** : le projet « Documentaire Mangaroa » lit `mangaroa-trailer-v2.mp4` avec `mangaroa-trailer-poster.jpg` comme affiche. Pour changer de film, remplacez ces deux fichiers à la racine (gardez le nom ou ajustez les `src`/`poster` dans `index.html`). Le fichier diffusé est en H.264/AAC 720p pour être lisible dans tous les navigateurs — l'export HEVC d'origine n'est pas utilisable sur le web. Gardez `preload="metadata"` pour ne pas charger la vidéo avant lecture.
 4. **Couleurs & thème** : ajustez les variables dans `styles.css` sous `[data-theme="dark"]` et `[data-theme="light"]` (`--bg`, `--fg`, `--accent`, etc.).
 5. **Typographie** : modifiez `--font-serif`, `--font-sans`, `--font-mono` dans `:root`.
 
