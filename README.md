@@ -97,8 +97,21 @@ outils, la disponibilité, le paiement, les projets et le contact.
 
 ## Liens
 
-- **Netlify** — [unknownmdg.netlify.app](https://unknownmdg.netlify.app/)
-- **Vercel** — [unknownmdg.vercel.app](https://unknownmdg.vercel.app/)
+- **Netlify** — [unknownmdg.netlify.app](https://unknownmdg.netlify.app/) *(page « site en construction »)*
+- **Vercel** — [unknownmdg.vercel.app](https://unknownmdg.vercel.app/) *(page « site en construction »)*
 - **Code** — [github.com/Unknown-MDG/UnknownMDG](https://github.com/Unknown-MDG/UnknownMDG)
 
-Les deux plateformes sont reliées au dépôt GitHub : chaque commit sur `main` est publié automatiquement, sans build (fichiers servis à la racine).
+## État du site : en construction
+
+Le portfolio est **en pause**. Les deux plateformes publient uniquement le dossier
+`construction/` :
+
+- Netlify : `publish = "construction"` dans `netlify.toml`
+- Vercel : `"outputDirectory": "construction"` dans `vercel.json`
+
+Les pages sont marquées `noindex, nofollow` (balise meta + en-tête `X-Robots-Tag`), donc
+elles n'apparaissent pas dans les moteurs de recherche.
+
+**Remettre le portfolio en ligne :** éditez `netlify.toml` (`publish = "."`) et
+`vercel.json` (supprimez `outputDirectory`), puis poussez sur `main`. La page de
+construction peut rester dans le dépôt sans être publiée.

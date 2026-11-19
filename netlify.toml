@@ -1,6 +1,7 @@
 [build]
-  # Site statique : aucun build, les fichiers publiés sont à la racine du dépôt.
-  publish = "."
+  # Portfolio en pause : seule la page « site en construction » est publiée.
+  # Pour remettre le portfolio en ligne, repassez publish = "."
+  publish = "construction"
   command = ""
 
 [[headers]]
@@ -9,3 +10,4 @@
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Robots-Tag = "noindex, nofollow"
